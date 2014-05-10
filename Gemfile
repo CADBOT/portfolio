@@ -41,6 +41,11 @@ gem 'foundation-rails'
 
 gem 'minitest-rails', '~> 2.0'
 
+group :production do 
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 group :test do
   gem 'minitest-rails-capybara', '~> 2.0'
 end
