@@ -9,4 +9,4 @@ notifications:
 before_script:
   - mkdir -p shippable/testresults
 script:
-  - rake test > shippable/testresults/results.out
+  - bundle exec rake test > shippable/testresults/results.out
