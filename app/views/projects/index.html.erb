@@ -1,17 +1,16 @@
-<h2>New project</h2>
-
-<%= form_for(@project) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :technologies_used %><br />
-    <%= f.text_area :technologies_used %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', projects_path %>
+<h2>My Portfolio</h2>
+            
+            <% @projects.each do |project| %>
+              <div class="project" id="<%= dom_id(project) %>">
+                <h3><%= project.name %></h3>
+                <p><%= project.technologies_used %></p>
+                <div class="nav">
+                  <%= link_to 'Show', project %> |
+                  <%= link_to 'Edit', edit_project_path(project) %> |
+                  <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
+            <% end %>
+            
+            <br />
+            <%= link_to 'New project', new_project_path %>
