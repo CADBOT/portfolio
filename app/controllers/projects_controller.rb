@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       render :new
+      flash.now[:error] = 'Project could not be saved.'
     end
   end
   
