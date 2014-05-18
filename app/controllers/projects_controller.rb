@@ -9,11 +9,13 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    @project = Project.new(params[:object])
+    @project = Project.new(project_params)
+    Rails.logger.debug "DEBUG: Creating a new project"
     if @project.save
       flash[:notice] = 'Project has been created.'
       redirect_to @project
     else
+      render :new
     end
   end
   
