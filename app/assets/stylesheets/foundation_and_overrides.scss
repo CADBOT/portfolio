@@ -2,6 +2,10 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
+// CADBOT custom colors
+$gun-metal: #2c3539;
+$teal: #336666;
+
 //
 // FOUNDATION SETTINGS
 //
@@ -39,8 +43,11 @@
 // Global
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: $gun-metal;
 // $body-font-color: #222;
+// $body-font-color: #fff;
+// $body-font-color: #fff;
+
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -54,6 +61,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
+$primary-color: lightblue;
 // $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
@@ -122,6 +130,7 @@
 // $header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
+// $header-font-color: tan;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -1094,8 +1103,8 @@
 // top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #336666;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: $teal;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -1115,7 +1124,7 @@ $topbar-bg-color: #336666;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #fff;
+$topbar-link-color: lightblue;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;

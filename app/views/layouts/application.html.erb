@@ -12,24 +12,7 @@
   </head>
 
   <body>
-    <nav class='top-bar'>
-      <ul class='title-area'>
-        <li class='name'>
-          <h3><%= link_to "CADBOT", root_path %></h3>
-        </li>
-      </ul>
-      <section class='top-bar-section'>
-        <ul class='right'>
-          <li class='divider'></li>
-          <li><%= link_to 'Posts', posts_path %></li>
-          <li class='divider'></li>
-          <li><%= link_to 'GitHub', 'https://github.com/CADBOT/' %></li>
-          <li class='divider'></li>
-          <li><%= link_to 'LinkedIn', 'http://www.linkedin.com/pub/charles-crawford-iii/56/61/8b8/' %></li>
-        </ul>
-      </div>
-    </nav>
-
+    <%= render partial: 'layouts/topbar' %>
     <%= yield %>
     <% flash.each do |key, value| %>
       <div class="alert-box round <%= flash_class(key) %>">
